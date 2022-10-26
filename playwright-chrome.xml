@@ -16,7 +16,7 @@ Converted By Community Applications   Always verify this template (and values)  
 https://hub.docker.com/r/browserless/chrome/</Overview>
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:3007]/</WebUI>
-  <TemplateURL></TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/playwright-chrome.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/browserless/chrome/master/assets/browserless_logo_screen_gradient.png</Icon>
   <ExtraParams/>
   <PostArgs/>
