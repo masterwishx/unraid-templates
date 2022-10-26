@@ -1,2 +1,2 @@
 # unraid-templates
-Unraid CA templates XML
+Unraid CA Docker templates XML
