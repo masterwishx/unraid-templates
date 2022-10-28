@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/130163-support-template-masterwishxplaywright-chrome/</Support>
+  <Support>https://forums.unraid.net/topic/130163-support-template-masterwishxbrowserless/</Support>
   <Project>https://github.com/browserless/chrome</Project>
   <Overview>Chrome as a service container. Bring your own hardware or cloud.&#xD;
 &#xD;
