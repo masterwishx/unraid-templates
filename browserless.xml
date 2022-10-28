@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>playwright-chrome</Name>
+  <Name>browserless</Name>
   <Repository>browserless/chrome</Repository>
   <Registry>https://hub.docker.com/r/browserless/chrome/</Registry>
   <Network>bridge</Network>
