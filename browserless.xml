@@ -14,13 +14,10 @@
 This docker is needed for changedetection.io for Playwright content fetcher.&#xD;
 &#xD;
 more read here:&#xD;
-https://github.com/dgtlmoon/changedetection.io/wiki/Fetching-pages-with-WebDriver&#xD;
 https://github.com/dgtlmoon/changedetection.io/wiki/Playwright-content-fetcher&#xD;
 https://docs.browserless.io/docs/docker-quickstart.html&#xD;
 &#xD;
-Docker size about 910Mb !!!&#xD;
-&#xD;
-I'm only made a template for it.&#xD;
+Docker size about 910Mb.&#xD;
 &#xD;
 add this var after install to your changedetection.io:&#xD;
 PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/?stealth=1&amp;amp;--disable-web-security=true</Overview>
