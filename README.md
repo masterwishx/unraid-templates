@@ -8,7 +8,7 @@ browserless is a web-service that allows for remote clients to connect, drive, a
 
 This docker is needed for changedetection.io for Playwright content fetcher.
 
-more read here:
+more read here:<br>
 https://github.com/dgtlmoon/changedetection.io/wiki/Playwright-content-fetcher
 https://docs.browserless.io/docs/docker-quickstart.html
 
