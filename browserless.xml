@@ -24,7 +24,7 @@ I'm only made a template for it.&#xD;
 &#xD;
 https://docs.browserless.io/docs/docker-quickstart.html&#xD;
 &#xD;
-add this var to after install to your changedetection.io:&#xD;
+add this var after install to your changedetection.io:&#xD;
 PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/?stealth=1&amp;amp;--disable-web-security=true</Overview>
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
