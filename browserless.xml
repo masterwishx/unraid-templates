@@ -30,7 +30,7 @@ PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/?stealth=1&amp;amp;--disable-web-secu
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/playwright-chrome.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/browserless/chrome/master/assets/browserless_logo_screen_gradient.png</Icon>
-  <ExtraParams/>
+  <ExtraParams>--restart=unless-stopped --shm-size=2G</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1666789308</DateInstalled>
