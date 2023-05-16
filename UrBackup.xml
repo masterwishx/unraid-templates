@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>UrBackup</Name>
-  <Repository>uroni/urbackup-server:latest</Repository>
+  <Repository>uroni/urbackup-server</Repository>
   <Registry>https://hub.docker.com/r/uroni/urbackup-server</Registry>
   <Network>host</Network>
   <MyIP/>
@@ -23,7 +23,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1684240917</DateInstalled>
+  <DateInstalled>1684251560</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
