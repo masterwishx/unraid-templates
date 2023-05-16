@@ -23,7 +23,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1684238918</DateInstalled>
+  <DateInstalled>1684240917</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
@@ -33,4 +33,5 @@
   <Config Name="Key 1" Target="PUID" Default="1000" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
   <Config Name="Key 3" Target="UMASK" Default="000" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
+  <Config Name="Log Folder" Target="/var/log" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/urbackup/log</Config>
 </Container>
