@@ -19,7 +19,7 @@
   <Category>Backup: Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:55414]/</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/urbackup-icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/images/urbackup-icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
