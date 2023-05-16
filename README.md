@@ -9,8 +9,8 @@ browserless is a web-service that allows for remote clients to connect, drive, a
 This docker is needed for changedetection.io for Playwright content fetcher.
 
 more read here:<br>
-https://github.com/dgtlmoon/changedetection.io/wiki/Playwright-content-fetcher
-https://docs.browserless.io/docs/docker-quickstart.html
+https://github.com/dgtlmoon/changedetection.io/wiki/Playwright-content-fetcher<br>
+https://docs.browserless.io/docs/docker-quickstart.html<br>
 
 Docker size about 910Mb.
 
@@ -28,6 +28,6 @@ PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/?stealth=1&--disable-web-security=tru
 
  
 
-https://www.urbackup.org/
-https://hub.docker.com/r/uroni/urbackup-server
-https://github.com/uroni/urbackup_backend
+https://www.urbackup.org/<br>
+https://hub.docker.com/r/uroni/urbackup-server<br>
+https://github.com/uroni/urbackup_backend<br>
