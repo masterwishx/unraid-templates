@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>UrBackup</Name>
+  <Repository>uroni/urbackup-server:latest</Repository>
+  <Registry>https://hub.docker.com/r/uroni/urbackup-server</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/139293-support-template-masterwishx-urbackup-official/</Support>
+  <Project>https://urbackup.org/</Project>
+  <Overview>&#xD;
+    UrBackup is an easy to setup Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.&#xD;
+    File and image backups are made while the system is running without interrupting current processes.&#xD;
+    UrBackup also continuously watches folders you want backed up in order to quickly find differences to previous backups. Because of that, incremental file backups are really fast.&#xD;
+    Your files can be restored through the web interface, via the client or the Windows Explorer while the backups of drive volumes can be restored with a bootable CD or USB-Stick (bare metal restore).&#xD;
+    A web interface makes setting up your own backup server really easy.&#xD;
+  </Overview>
+  <Category>Backup: Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:55414]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/urbackup-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1684238918</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="TimeZone" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Asia/Jerusalem</Config>
+  <Config Name="Backup Folder" Target="/backups" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/urBackup/</Config>
+  <Config Name="Database Folder" Target="/var/urbackup" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/urbackup</Config>
+  <Config Name="Key 1" Target="PUID" Default="1000" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="Key 3" Target="UMASK" Default="000" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
+</Container>
