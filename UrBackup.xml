@@ -15,6 +15,22 @@
     UrBackup also continuously watches folders you want backed up in order to quickly find differences to previous backups. Because of that, incremental file backups are really fast.&#xD;
     Your files can be restored through the web interface, via the client or the Windows Explorer while the backups of drive volumes can be restored with a bootable CD or USB-Stick (bare metal restore).&#xD;
     A web interface makes setting up your own backup server really easy.&#xD;
+
+    For easy install use binhex-urbackup, if you need faster App updates,smaller size container and ZFS support use this Official container.
+    But some steps are needed in console:
+    
+    1. cd /mnt/user/appdata
+    2. mkdir -p {urbackup,urbackup/sqlite/tmp/,urbackup/tmp,urbackup/config}
+    3. chown 99:100 -R urbackup
+    4. Copy urbackupsrv file to urbackup/config 
+    5. chown root:root -R urbackup/config
+
+    Download 'urbackupsrv' from:
+    https://forums.unraid.net/topic/139293-support-template-masterwishx-urbackup-official/ or
+    https://raw.githubusercontent.com/masterwishx/unraid-templates/main/resources/urbackup/urbackupsrv
+
+    
+    &#xD;
   </Overview>
   <Category>Backup: Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:55414]/</WebUI>
@@ -34,4 +50,5 @@
   <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
   <Config Name="Key 3" Target="UMASK" Default="000" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
   <Config Name="Log Folder" Target="/var/log" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/urbackup/log</Config>
+  <Config Name="Config Folder" Target="/etc/default/urbackupsrv" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/urbackup/config/urbackupsrv</Config>
 </Container>

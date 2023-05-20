@@ -26,7 +26,19 @@ PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/?stealth=1&--disable-web-security=tru
  Your files can be restored through the web interface, via the client or the Windows Explorer while the backups of drive volumes can be restored with a bootable CD or USB-Stick (bare metal restore).
  A web interface makes setting up your own backup server really easy.
 
- 
+For easy install use binhex-urbackup, if you need faster App updates,smaller size container and ZFS support use this Official container.
+    But some steps are needed in console:
+    
+    1. cd /mnt/user/appdata
+    2. mkdir -p {urbackup,urbackup/sqlite/tmp/,urbackup/tmp,urbackup/config}
+    3. chown 99:100 -R urbackup
+    4. Copy urbackupsrv file to urbackup/config 
+    5. chown root:root -R urbackup/config
+
+    Download 'urbackupsrv' from:
+    https://forums.unraid.net/topic/139293-support-template-masterwishx-urbackup-official/ or
+    https://raw.githubusercontent.com/masterwishx/unraid-templates/main/resources/urbackup/urbackupsrv
+
 
 https://www.urbackup.org/<br>
 https://hub.docker.com/r/uroni/urbackup-server<br>
