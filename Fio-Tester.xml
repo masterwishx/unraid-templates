@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Fio-Tester</Name>
+  <Repository>mayadata/fio</Repository>
+  <Registry>https://hub.docker.com/r/mayadata/fio</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/142035-support-template-masterwishx-fio-tester/</Support>
+  <Project>https://github.com/axboe/fio</Project>
+  <Overview>Flexible I/O Tester&#xD;
+&#xD;
+Fio was originally written to save me the hassle of writing special test case programs when I wanted to test a specific workload, either for performance reasons or to find/reproduce a bug. The process of writing such a test app can be tiresome, especially if you have to do it often. Hence I needed a tool that would be able to simulate a given I/O workload without resorting to writing a tailored test case again and again.&#xD;
+&#xD;
+A test work load is difficult to define, though. There can be any number of processes or threads involved, and they can each be using their own way of generating I/O. You could have someone dirtying large amounts of memory in a memory mapped file, or maybe several threads issuing reads using asynchronous I/O. fio needed to be flexible enough to simulate both of these cases, and many more.&#xD;
+&#xD;
+Fio spawns a number of threads or processes doing a particular type of I/O action as specified by the user. fio takes a number of global parameters, each inherited by the thread unless otherwise parameters given to them overriding that setting is given. The typical use of fio is to write a job file matching the I/O load one wants to simulate.&#xD;
+&#xD;
+https://hub.docker.com/r/mayadata/fio&#xD;
+https://github.com/axboe/fio&#xD;
+&#xD;
+Container running as Server, go to console for enter commands , please check support :&#xD;
+https://forums.unraid.net/topic/142035-support-template-masterwishx-fio-tester</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/images/Fio-Tester.png</Icon>
+  <ExtraParams/>
+  <PostArgs>fio --server</PostArgs>
+  <CPUset/>
+  <DateInstalled>1689266628</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="MountPoints" Target="/mnt" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt</Config>
+  <Config Name="AppData" Target="/fio" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Fio/</Config>
+</Container>
