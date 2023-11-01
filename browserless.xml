@@ -24,7 +24,7 @@ PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/?stealth=1&amp;amp;--disable-web-secu
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/browserless.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/browserless/chrome/master/assets/browserless_logo_screen_gradient.png</Icon>
+  <Icon>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/images/browserless_logo.png</Icon>
   <ExtraParams>--restart=unless-stopped --shm-size=2G</ExtraParams>
   <PostArgs/>
   <CPUset/>
