@@ -28,7 +28,7 @@ remote_write:&#xD;
   http://192.168.0.199:9009/prometheus</Overview>
   <Category>Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:9009]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/mimir.xml<TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/mimir.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/images/mimir.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs>--config.file=/mimir/config/mimir.yaml</PostArgs>
