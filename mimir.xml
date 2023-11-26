@@ -22,7 +22,7 @@ https://github.com/grafana/mimir/blob/main/docs/configurations/single-process-co
 2. Add to Prometheus:&#xD;
 #scrapes itself and writes those metrics to Grafana Mimir&#xD;
 remote_write:&#xD;
-   - url: http://10.0.0.119:9009/api/v1/push&#xD;
+   - url: http://192.168.0.199:9009/api/v1/push&#xD;
 &#xD;
 3. Add Mimir Datasource in Grafana :&#xD;
   http://192.168.0.199:9009/prometheus</Overview>
