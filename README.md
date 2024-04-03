@@ -29,7 +29,7 @@ https://www.urbackup.org/<br>
 https://hub.docker.com/r/uroni/urbackup-server<br>
 https://github.com/uroni/urbackup_backend<br>
 
-3. ```GrafanaMimir.xml``
+3. ```GrafanaMimir.xml```
 
 Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.
 
