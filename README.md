@@ -2,7 +2,7 @@
 
 Unraid Docker templates XML for CA
 
-1. browserless.xml
+1. ```browserless.xml```
 
 browserless is a web-service that allows for remote clients to connect, drive, and execute headless work; all inside of docker. It offers first-class integrations for puppeteer, playwright, selenium's webdriver, and a slew of handy REST APIs for doing more common work.
 
@@ -17,32 +17,29 @@ Docker size about 910Mb.
 add this var after install to your changedetection.io:
 PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/?stealth=1&--disable-web-security=true
 
+2. ```UrBackup.xml```
 
-2. UrBackup.xml
- 
- UrBackup is an easy to setup Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.
- File and image backups are made while the system is running without interrupting current processes.
- UrBackup also continuously watches folders you want backed up in order to quickly find differences to previous backups. Because of that, incremental file backups are really fast.
- Your files can be restored through the web interface, via the client or the Windows Explorer while the backups of drive volumes can be restored with a bootable CD or USB-Stick (bare metal restore).
- A web interface makes setting up your own backup server really easy.
-
- 
+UrBackup is an easy to setup Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.
+File and image backups are made while the system is running without interrupting current processes.
+UrBackup also continuously watches folders you want backed up in order to quickly find differences to previous backups. Because of that, incremental file backups are really fast.
+Your files can be restored through the web interface, via the client or the Windows Explorer while the backups of drive volumes can be restored with a bootable CD or USB-Stick (bare metal restore).
+A web interface makes setting up your own backup server really easy.
 
 https://www.urbackup.org/<br>
 https://hub.docker.com/r/uroni/urbackup-server<br>
 https://github.com/uroni/urbackup_backend<br>
 
-3. GrafanaMimir.xml
+3. ```GrafanaMimir.xml``
 
 Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.
 
-4. browserless-v2.xml
+4. ```browserless-v2.xml```
 
 browserless is a web-service that allows for remote clients to connect, drive, and execute headless work; all inside of docker. It offers first-class integrations for puppeteer, playwright, selenium's webdriver, and a slew of handy REST APIs for doing more common work.
 
 This docker is needed for changedetection.io for Playwright content fetcher.
 
-5. Fio-Tester.xml
+5. ```Fio-Tester.xml```
 
 Flexible I/O Tester
 
@@ -52,7 +49,7 @@ A test work load is difficult to define, though. There can be any number of proc
 
 Fio spawns a number of threads or processes doing a particular type of I/O action as specified by the user. fio takes a number of global parameters, each inherited by the thread unless otherwise parameters given to them overriding that setting is given. The typical use of fio is to write a job file matching the I/O load one wants to simulate.
 
-6. RedisInsight.xml
+6. ```RedisInsight.xml```
 
 RedisInsight - The GUI for Redis.
 
