@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>browserless-v2</Name>
+  <Repository>ghcr.io/browserless/chrome</Repository>
+  <Registry>https://hub.docker.com/r/browserless/chrome/</Registry>
+  <Network>proxynet</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/160453-support-template-masterwishxbrowserless-v2/</Support>
+  <Project>https://github.com/browserless/chrome</Project>
+  <Overview>browserless is a web-service that allows for remote clients to connect, drive, and execute headless work; all inside of docker. It offers first-class integrations for puppeteer, playwright, selenium's webdriver, and a slew of handy REST APIs for doing more common work.&#xD;
+&#xD;
+This docker is needed for changedetection.io for Playwright content fetcher.&#xD;
+&#xD;
+more read here:&#xD;
+https://github.com/dgtlmoon/changedetection.io/wiki/Playwright-content-fetcher&#xD;
+https://docs.browserless.io/#choose-your-library&#xD;
+&#xD;
+add this var after install to your changedetection.io:&#xD;
+PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/chrome?token=yourtoken&amp;amp;launch={"defaultViewport":{"height":1080,"width":1920},"headless":false,"stealth":true}&amp;amp;blockAds=true&#xD;
+&#xD;
+</Overview>
+  <Category>Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:3000]/?token=2BR6DgQzZL8md4Bk5rewy3K9k</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/master/browserless.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/images/browserless_logo.png</Icon>
+  <ExtraParams>--restart=unless-stopped --shm-size=2G</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1712170097</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Host Port 1" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3012</Config>
+  <Config Name="SCREEN_WIDTH" Target="SCREEN_WIDTH" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">2560</Config>
+  <Config Name="SCREEN_HEIGHT" Target="SCREEN_HEIGHT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1440</Config>
+  <Config Name="SCREEN_DEPTH" Target="SCREEN_DEPTH" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">16</Config>
+  <Config Name="TIMEOUT" Target="TIMEOUT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">300000</Config>
+  <Config Name="ENABLE_DEBUGGER" Target="ENABLE_DEBUGGER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="CONCURRENT" Target="CONCURRENT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">10</Config>
+  <Config Name="TOKEN" Target="TOKEN" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">2BR6DgQzZL8md4Bk5rewy3K9k</Config>
+</Container>
