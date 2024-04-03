@@ -2,7 +2,7 @@
 
 Unraid Docker templates XML for CA
 
-1. ```<b>browserless.xml</b>```
+1. <b>```browserless.xml```</b>
 
 browserless is a web-service that allows for remote clients to connect, drive, and execute headless work; all inside of docker. It offers first-class integrations for puppeteer, playwright, selenium's webdriver, and a slew of handy REST APIs for doing more common work.
 
