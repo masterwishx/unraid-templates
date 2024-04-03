@@ -3,7 +3,7 @@
   <Name>browserless-v2</Name>
   <Repository>ghcr.io/browserless/chrome</Repository>
   <Registry>https://hub.docker.com/r/browserless/chrome/</Registry>
-  <Network>proxynet</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
