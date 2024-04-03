@@ -17,7 +17,7 @@ Docker size about 910Mb.
 add this var after install to your changedetection.io:
 PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/?stealth=1&--disable-web-security=true
 
-2. ```UrBackup.xml```
+2. <b>```UrBackup.xml```</b>
 
 UrBackup is an easy to setup Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.
 File and image backups are made while the system is running without interrupting current processes.
@@ -29,17 +29,17 @@ https://www.urbackup.org/<br>
 https://hub.docker.com/r/uroni/urbackup-server<br>
 https://github.com/uroni/urbackup_backend<br>
 
-3. ```GrafanaMimir.xml```
+3. <b>```GrafanaMimir.xml```</b>
 
 Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.
 
-4. ```browserless-v2.xml```
+4. <b>```browserless-v2.xml```</b>
 
 browserless is a web-service that allows for remote clients to connect, drive, and execute headless work; all inside of docker. It offers first-class integrations for puppeteer, playwright, selenium's webdriver, and a slew of handy REST APIs for doing more common work.
 
 This docker is needed for changedetection.io for Playwright content fetcher.
 
-5. ```Fio-Tester.xml```
+5. <b>```Fio-Tester.xml```</b>
 
 Flexible I/O Tester
 
@@ -49,7 +49,7 @@ A test work load is difficult to define, though. There can be any number of proc
 
 Fio spawns a number of threads or processes doing a particular type of I/O action as specified by the user. fio takes a number of global parameters, each inherited by the thread unless otherwise parameters given to them overriding that setting is given. The typical use of fio is to write a job file matching the I/O load one wants to simulate.
 
-6. ```RedisInsight.xml```
+6. <b>```RedisInsight.xml```</b>
 
 RedisInsight - The GUI for Redis.
 
