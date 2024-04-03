@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>RedisInsight</Name>
+  <Repository>redis/redisinsight:latest</Repository>
+  <Registry>https://hub.docker.com/r/redis/redisinsight</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/160449-support-template-masterwishxredisinsight/</Support>
+  <Project>https://redis.com/redis-enterprise/redis-insight/</Project>
+  <Overview>RedisInsight - The GUI for Redis.&#xD;
+&#xD;
+Take your productivity to the next level when developing with Redis or Redis Stack! Use RedisInsight to visualize and optimize Redis data. A powerful desktop manager, RedisInsight provides an intuitive and efficient UI for Redis and Redis Stack and supports CLI interaction in a fully-featured desktop UI client.</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:5540]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/TrophyBuck/unraid-templates/main/redisInsight/redisInsight.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/images/redisInsightLogo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1712168080</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Host Port 1" Target="5540" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">5540</Config>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/redisinsight/</Config>
+</Container>
