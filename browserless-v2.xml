@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>browserless-v2</Name>
-  <Repository>ghcr.io/browserless/chrome</Repository>
-  <Registry>https://hub.docker.com/r/browserless/chrome/</Registry>
+  <Repository>ghcr.io/browserless/chromium</Repository>
+  <Registry>https://github.com/browserless/browserless/pkgs/container/chromium</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -15,10 +15,11 @@ This docker is needed for changedetection.io for Playwright content fetcher.&#xD
 &#xD;
 more read here:&#xD;
 https://github.com/dgtlmoon/changedetection.io/wiki/Playwright-content-fetcher&#xD;
-https://docs.browserless.io/#choose-your-library&#xD;
+https://docs.browserless.io/Docker/docker-quickstart&#xD;
 &#xD;
 add this var after install to your changedetection.io:&#xD;
-PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/chrome?token=yourtoken&amp;amp;launch={"defaultViewport":{"height":1080,"width":1920},"headless":false,"stealth":true}&amp;amp;blockAds=true&#xD;
+&#xD;
+PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/chromium?token=yourtoken&amp;amp;launch={"defaultViewport":"height":1080,"width":1920},"headless":false,"stealth":true}&amp;amp;blockAds=true&#xD;
 &#xD;
 </Overview>
   <Category>Tools:Utilities</Category>
