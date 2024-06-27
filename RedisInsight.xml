@@ -11,7 +11,11 @@
   <Project>https://redis.com/redis-enterprise/redis-insight/</Project>
   <Overview>RedisInsight - The GUI for Redis.&#xD;
 &#xD;
-Take your productivity to the next level when developing with Redis or Redis Stack! Use RedisInsight to visualize and optimize Redis data. A powerful desktop manager, RedisInsight provides an intuitive and efficient UI for Redis and Redis Stack and supports CLI interaction in a fully-featured desktop UI client.</Overview>
+Take your productivity to the next level when developing with Redis or Redis Stack! Use RedisInsight to visualize and optimize Redis data. A powerful desktop manager, RedisInsight provides an intuitive and efficient UI for Redis and Redis Stack and supports CLI interaction in a fully-featured desktop UI client.&#xD;
+&#xD;
+In case of permission error, open terminal and run :&#xD;
+"chmod 777 /mnt/user/appdata/redisinsight/"&#xD;
+</Overview>
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:5540]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/RedisInsight.xml</TemplateURL>
