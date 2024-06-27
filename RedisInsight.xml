@@ -14,7 +14,7 @@
 Take your productivity to the next level when developing with Redis or Redis Stack! Use RedisInsight to visualize and optimize Redis data. A powerful desktop manager, RedisInsight provides an intuitive and efficient UI for Redis and Redis Stack and supports CLI interaction in a fully-featured desktop UI client.</Overview>
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:5540]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/TrophyBuck/unraid-templates/main/redisInsight/redisInsight.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/RedisInsight.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/images/redisInsightLogo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
