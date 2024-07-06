@@ -19,7 +19,7 @@ https://docs.browserless.io/Docker/docker-quickstart&#xD;
 &#xD;
 add this var after install to your changedetection.io:&#xD;
 &#xD;
-PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/chromium?token=yourtoken&amp;amp;launch={"defaultViewport":"height":1080,"width":1920},"headless":false,"stealth":true}&amp;amp;blockAds=true&#xD;
+PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/chromium?token=yourtoken&amp;amp;launch={"defaultViewport":{"height":1080,"width":1920},"headless":false,"stealth":true}&amp;amp;blockAds=true&#xD;
 &#xD;
 </Overview>
   <Category>Tools:Utilities</Category>
