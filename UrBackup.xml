@@ -26,8 +26,7 @@
   <DateInstalled>1684251560</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Requires/>
-  <Config Name="TimeZone" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Asia/Jerusalem</Config>
+  <Requires/>  
   <Config Name="Backup Folder" Target="/backups" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/urBackup/</Config>
   <Config Name="Database Folder" Target="/var/urbackup" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/urbackup</Config>
   <Config Name="Key 1" Target="PUID" Default="1000" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
