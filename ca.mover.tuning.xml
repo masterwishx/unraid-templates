@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+<Plugin>True</Plugin>
+<PluginURL>https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg</PluginURL>
+<PluginAuthor>Andrew Zawadzki, hugenbdd, Reynald and masterwishx</PluginAuthor>
+<Beta>False</Beta>
+<Category>Tools:System</Category>
+<Name>Mover Tuning</Name>
+<CA>Addon</CA>
+<Description>
+A simple plugin to fine tune the operation of the scheduled mover script.
+Only run when cache space is getting low and filter files to move according to age, size, ...; don't run if a parity check / rebuild is in progress; or completely disable the scheduled moves. Can enable turbo write to speed up things.
+</Description>
+<Date>2019-01-17</Date>
+<Changes>
+- 2024-07-10
+    - Unraid 7.0.0 compatibility (/ 6.x bug?): original mover now works with "Move Now button follows plug-in filters" set to off - [Unraid 7.0.0 compatibility](https://github.com/R3yn4ld/ca.mover.tuning/tree/unraid-7.0.0-compatibility) ([R3yn4ld](https://github.com/R3yn4ld))
+
+- 2024-07-07:
+    - [Unraid 7.0.0 compatibility](https://github.com/R3yn4ld/ca.mover.tuning/tree/unraid-7.0.0-compatibility) ([R3yn4ld](https://github.com/R3yn4ld))
+- 2024-06-30: (handover by Reynald)
+    - [Automatic age threshold](https://github.com/R3yn4ld/ca.mover.tuning/tree/automatic-age-threshold) ([R3yn4ld](https://github.com/R3yn4ld))
+    - [Minor spelling corrections and README](https://github.com/dphelan/ca.mover.tuning/tree/spelling-corrections) ([Dphelan](https://github.com/dphelan))
+    - [Merge share skipfiletypes](https://github.com/davendesai/unraid-mover-tuning/tree/merge-share-skipfiletypes) ([Davendsai](https://github.com/davendesai))(add/merge per share skipfilestype to global skips)
+    - [Update Mover.tuning.page](https://github.com/Squidly271/ca.mover.tuning/tree/patch-2) ([Squid](https://github.com/Squidly271))
+
+- 2023.12.19 (was not in [master branch from hugenbd](https://github.com/hugenbd/ca.mover.tuning))
+    - [4 changes from Swarles](https://github.com/hugenbd/ca.mover.tuning/commit/64e06e91bd83431d768346e4d8158f7be039564e) ([Swarles](https://forums.unraid.net/profile/213067-swarles/))
+        - Change "while read" lines in age_mover to "while IFS= read -r" to fix trailing white spaces (Swarles)
+        - Fix where sometimes mover would not run to mover.old scrip (Swarles)
+        - Log if "share.cfg" doesn't exists to help trouble shooting (Swarles)
+        - Check for ca.mover.tuning.cfg file and additional logging. (Swarles)
+</Changes>
+<Support>https://forums.unraid.net/topic/70783-plugin-mover-tuning/</Support>
+<Icon>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/images/ca.mover.tuning.png</Icon>
+</Containers>
