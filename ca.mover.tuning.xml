@@ -9,14 +9,10 @@
 <CA>Addon</CA>
 <Description>
 This is a simple unRaid plugin that will let you fine-tune the operation of the mover.
-
-- On scheduled runs of mover    
-    - Only actually move file(s) if the cache drive is getting full (selectable thresholds) or/and based on files age,size,etc.
-    - Optionally don't move if a parity check / rebuild is already in-progress.
-    - Optionally validate input filenames to prevent attacks on the filename.
-- Optional ability to completely disable the scheduled runs of mover.
-- Manually executed runs of mover ("Move Now" button) or via command line ("mover start") can follow schedule rules or/and always move all files.
-- Expanded functionality with numerous additional options and settings.
+On scheduled runs of mover actually move file(s) if the cache drive is getting full (selectable thresholds) and/or based on files age,size,etc.
+Optionally don't move if a parity check / rebuild is already in-progress. Optionally validate input filenames to prevent attacks on the filename.
+Optional ability to completely disable the scheduled runs of mover. Manually executed runs of mover ("Move Now" button) or via command line ("mover start")
+ can follow schedule rules and/or always move all files. Expanded functionality with numerous additional options and settings.
 </Description>
 <Date>2019-01-17</Date>
 <Changes>
