@@ -2,7 +2,7 @@
 <Containers>
 <Plugin>True</Plugin>
 <PluginURL>https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg</PluginURL>
-<PluginAuthor>Andrew Zawadzki, hugenbdd, Reynald and masterwishx</PluginAuthor>
+<PluginAuthor>Andrew Zawadzki, hugenbdd, Reynald and Masterwishx</PluginAuthor>
 <Beta>False</Beta>
 <Category>Tools:System</Category>
 <Name>Mover Tuning</Name>
