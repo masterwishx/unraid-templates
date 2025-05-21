@@ -10,11 +10,11 @@
 <Description>
 This is a unRaid plugin for fine-tuning the mover operation:
 - Moves files on scheduled runs based on cache fullness (selectable thresholds), file age, size, etc.
-- Prevents moves during parity checks or rebuilds
-- Validates filenames to protect against attacks
-- Can disable scheduled runs of mover plugin
-- Supports manual and command-line executions following schedule rules and/or always move all files
-- Offers expanded functionality with additional options and settings
+- Prevents moves during parity checks or rebuilds.
+- Validates filenames to protect against attacks.
+- Can disable scheduled runs of mover plugin.
+- Supports manual and command-line executions following schedule rules and/or always move all files.
+- Offers expanded functionality with additional options and settings.
 </Description>
 <Date>2019-01-17</Date>
 <Changes>
