@@ -83,14 +83,6 @@ https://redis.io/insight/
 
 * Semaphore is a modern UI for Ansible. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system.
 
- * Semaphore is written in pure Go and available for Windows, macOS and Linux (x64, ARM, ARM64). Semaphore is an open-source project with concise and high-quality code.
-
-   Semaphore supports the following databases:
-
-    * MySQL
-    * PostgreSQL
-    * BoltDB – embedded key/value database
-
    With Semaphore you can:
 
     * Build, deploy and rollback
