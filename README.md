@@ -1,6 +1,6 @@
 # unRAID Plugins for CA
 
-- ## ```Mover Tuning```
+## ```Mover Tuning```
 
 This is a simple [Unraid](https://unraid.net/) plugin that will let you fine-tune the operation of the [mover](https://docs.unraid.net/unraid-os/manual/additional-settings/#mover).
 
@@ -20,61 +20,86 @@ https://forums.unraid.net/topic/70783-plugin-mover-tuning<br>
 
 # unRAID Docker templates XML for CA
 
-- ## ```browserless.xml```
+## ```browserless.xml```
 
-browserless is a web-service that allows for remote clients to connect, drive, and execute headless work; all inside of docker. It offers first-class integrations for puppeteer, playwright, selenium's webdriver, and a slew of handy REST APIs for doing more common work.
+* browserless is a web-service that allows for remote clients to connect, drive, and execute headless work; all inside of docker. It offers first-class integrations for puppeteer, playwright, selenium's webdriver, and a slew of handy REST APIs for doing more common work.
 
-This docker is needed for changedetection.io for Playwright content fetcher.
+  This docker is needed for changedetection.io for Playwright content fetcher.
 
-more read here:<br>
+  more read here:<br>
 https://github.com/dgtlmoon/changedetection.io/wiki/Playwright-content-fetcher<br>
 https://docs.browserless.io/docs/docker-quickstart.html<br>
 
-Docker size about 910Mb.
+  Docker size about 910Mb.
 
-add this var after install to your changedetection.io:
-PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/?stealth=1&--disable-web-security=true
+  add this var after install to your changedetection.io:<br>
+```PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/?stealth=1&--disable-web-security=true```
 
-- ## ```browserless-v2.xml```
+## ```browserless-v2.xml```
 
-browserless is a web-service that allows for remote clients to connect, drive, and execute headless work; all inside of docker. It offers first-class integrations for puppeteer, playwright, selenium's webdriver, and a slew of handy REST APIs for doing more common work.
+* browserless is a web-service that allows for remote clients to connect, drive, and execute headless work; all inside of docker. It offers first-class integrations for puppeteer, playwright, selenium's webdriver, and a slew of handy REST APIs for doing more common work.
 
-This docker is needed for changedetection.io for Playwright content fetcher.<br>
+  This docker is needed for changedetection.io for Playwright content fetcher.<br>
 https://github.com/browserless/browserless
 
 
-- ## ```UrBackup.xml```
+## ```UrBackup.xml```
 
-UrBackup is an easy to setup Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.
+* UrBackup is an easy to setup Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.
 File and image backups are made while the system is running without interrupting current processes.
-UrBackup also continuously watches folders you want backed up in order to quickly find differences to previous backups. Because of that, incremental file backups are really fast.
-Your files can be restored through the web interface, via the client or the Windows Explorer while the backups of drive volumes can be restored with a bootable CD or USB-Stick (bare metal restore).
-A web interface makes setting up your own backup server really easy.
 
+* UrBackup also continuously watches folders you want backed up in order to quickly find differences to previous backups. Because of that, incremental file backups are really fast.
+
+* Your files can be restored through the web interface, via the client or the Windows Explorer while the backups of drive volumes can be restored with a bootable CD or USB-Stick (bare metal restore).
+A web interface makes setting up your own backup server really easy.<br>
 https://www.urbackup.org/<br>
 https://hub.docker.com/r/uroni/urbackup-server<br>
 https://github.com/uroni/urbackup_backend<br>
 
-- ## ```GrafanaMimir.xml```
+## ```GrafanaMimir.xml```
 
-Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.<br>
+* Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.<br>
 https://github.com/grafana/mimir
 
-- ## ```Fio-Tester.xml```
+## ```Fio-Tester.xml```
 
-Flexible I/O Tester
+  Flexible I/O Tester
 
-Fio was originally written to save me the hassle of writing special test case programs when I wanted to test a specific workload, either for performance reasons or to find/reproduce a bug. The process of writing such a test app can be tiresome, especially if you have to do it often. Hence I needed a tool that would be able to simulate a given I/O workload without resorting to writing a tailored test case again and again.
+* Fio was originally written to save me the hassle of writing special test case programs when I wanted to test a specific workload, either for performance reasons or to find/reproduce a bug. The process of writing such a test app can be tiresome, especially if you have to do it often. Hence I needed a tool that would be able to simulate a given I/O workload without resorting to writing a tailored test case again and again.
 
-A test work load is difficult to define, though. There can be any number of processes or threads involved, and they can each be using their own way of generating I/O. You could have someone dirtying large amounts of memory in a memory mapped file, or maybe several threads issuing reads using asynchronous I/O. fio needed to be flexible enough to simulate both of these cases, and many more.
+* A test work load is difficult to define, though. There can be any number of processes or threads involved, and they can each be using their own way of generating I/O. You could have someone dirtying large amounts of memory in a memory mapped file, or maybe several threads issuing reads using asynchronous I/O. fio needed to be flexible enough to simulate both of these cases, and many more.
 
-Fio spawns a number of threads or processes doing a particular type of I/O action as specified by the user. fio takes a number of global parameters, each inherited by the thread unless otherwise parameters given to them overriding that setting is given. The typical use of fio is to write a job file matching the I/O load one wants to simulate.<br>
+* Fio spawns a number of threads or processes doing a particular type of I/O action as specified by the user. fio takes a number of global parameters, each inherited by the thread unless otherwise parameters given to them overriding that setting is given. The typical use of fio is to write a job file matching the I/O load one wants to simulate.<br>
 https://github.com/axboe/fio
 
-- ## ```RedisInsight.xml```
+## ```RedisInsight.xml```
 
-RedisInsight - The GUI for Redis.
+  RedisInsight - The GUI for Redis.
 
-Take your productivity to the next level when developing with Redis or Redis Stack! Use RedisInsight to visualize and optimize Redis data. A powerful desktop manager, RedisInsight provides an intuitive and efficient UI for Redis and Redis Stack and supports CLI interaction in a fully-featured desktop UI client.<br>
+* Take your productivity to the next level when developing with Redis or Redis Stack! Use RedisInsight to visualize and optimize Redis data. A powerful desktop manager, RedisInsight provides an intuitive and efficient UI for Redis and Redis Stack and supports CLI interaction in a fully-featured desktop UI client.<br>
 https://redis.io/insight/
 
+## ```semaphore.xml ```
+
+* Semaphore is a modern UI for Ansible. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system.
+
+ * Semaphore is written in pure Go and available for Windows, macOS and Linux (x64, ARM, ARM64). Semaphore is an open-source project with concise and high-quality code.
+
+   Semaphore supports the following databases:
+
+    * MySQL
+    * PostgreSQL
+    * BoltDB – embedded key/value database
+
+   With Semaphore you can:
+
+    * Build, deploy and rollback
+    * Group playbooks to projects
+    * Manage environments, inventories, repositories and access keys
+    * Run playbooks from the browser. Responsive UI allows the use of Semaphore on mobile devices
+    * Run playbooks by schedule
+    * View detailed logs of any playbook runs, at any time
+    * Delegate other users the running of playbooks
+    * Get notifications about playbook runs
+
+https://semaphoreui.com
