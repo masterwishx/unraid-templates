@@ -41,14 +41,14 @@ https://filebrowserquantum.com/en/docs/getting-started/</Overview>
 2. *Download config and put to* "**/filebrowserQuantum**" *folder.*&#13;
  https://github.com/masterwishx/unraid-templates/tree/main/configs/filebrowserQuantum/config.yaml&#13;
  &#13;
-3. *Make share for files* "**FileBrowser Files**"*, then make folder for users.*&#13;
+3. *Make share for files* "**FileBrowser Files**", *then make folder for users.*&#13;
  mkdir -p /mnt/user/FileBrowser Files/users&#13;
  chown -R 1000:100 /mnt/user/FileBrowser Files/users&#13;
  &#13;
 4. *Enjoy*&#13;
 &#13;
 **Warning:**&#13;
-*After the first login using* **admin:admin** *, change the password or create a new admin user.*&#13;
+*After the first login using* **admin:admin**, *change the password or create a new admin user.*&#13;
 *If you do not update the credentials in the config file like this:*&#13;
 &#13;
  'adminUsername: "**hidden**"'&#13;
