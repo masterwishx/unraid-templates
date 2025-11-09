@@ -1,6 +1,6 @@
 # unRAID Plugins for CA
 
-## ```Mover Tuning```
+###  **```Mover Tuning Plugin```**
 
 This is a simple [Unraid](https://unraid.net/) plugin that will let you fine-tune the operation of the [mover](https://docs.unraid.net/unraid-os/manual/additional-settings/#mover).
 
@@ -12,15 +12,20 @@ This is a simple [Unraid](https://unraid.net/) plugin that will let you fine-tun
 - Manually executed runs of mover ("Move Now" button) or via command line ("mover start") can follow schedule rules or/and always move all files.
 - Expanded functionality with numerous additional options and settings.
 
-https://github.com/masterwishx/ca.mover.tuning<br>
-https://forums.unraid.net/topic/70783-plugin-mover-tuning<br>
-
-<br>
-<br>
+  https://github.com/masterwishx/ca.mover.tuning<br>
+  https://forums.unraid.net/topic/70783-plugin-mover-tuning<br>
 
 # unRAID Docker templates XML for CA
 
-## ```browserless.xml```
+### **```FileBrowserQuantum.xml```**
+
+* FileBrowser Quantum provides an easy way to access and manage your files from the web. It has a modern responsive interface that has many advanced features to manage users, access, sharing, and file preview and editing.
+
+* This version is called "Quantum" because it packs tons of advanced features into a tiny easy to run file. Unlike the majority of alternative options, FileBrowser Quantum is simple to install and easy to configure.
+
+https://github.com/gtsteffaniak/filebrowser
+
+### **```browserless.xml```**
 
 * browserless is a web-service that allows for remote clients to connect, drive, and execute headless work; all inside of docker. It offers first-class integrations for puppeteer, playwright, selenium's webdriver, and a slew of handy REST APIs for doing more common work.
 
@@ -35,7 +40,7 @@ https://docs.browserless.io/docs/docker-quickstart.html<br>
   add this var after install to your changedetection.io:<br>
 ```PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/?stealth=1&--disable-web-security=true```
 
-## ```browserless-v2.xml```
+### **```browserless-v2.xml```**
 
 * browserless is a web-service that allows for remote clients to connect, drive, and execute headless work; all inside of docker. It offers first-class integrations for puppeteer, playwright, selenium's webdriver, and a slew of handy REST APIs for doing more common work.
 
@@ -43,7 +48,7 @@ https://docs.browserless.io/docs/docker-quickstart.html<br>
 https://github.com/browserless/browserless
 
 
-## ```UrBackup.xml```
+### **```UrBackup.xml```**
 
 * UrBackup is an easy to setup Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.
 File and image backups are made while the system is running without interrupting current processes.
@@ -56,12 +61,12 @@ https://www.urbackup.org/<br>
 https://hub.docker.com/r/uroni/urbackup-server<br>
 https://github.com/uroni/urbackup_backend<br>
 
-## ```GrafanaMimir.xml```
+### **```GrafanaMimir.xml```**
 
 * Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.<br>
 https://github.com/grafana/mimir
 
-## ```Fio-Tester.xml```
+### **```Fio-Tester.xml```**
 
   Flexible I/O Tester
 
@@ -72,14 +77,14 @@ https://github.com/grafana/mimir
 * Fio spawns a number of threads or processes doing a particular type of I/O action as specified by the user. fio takes a number of global parameters, each inherited by the thread unless otherwise parameters given to them overriding that setting is given. The typical use of fio is to write a job file matching the I/O load one wants to simulate.<br>
 https://github.com/axboe/fio
 
-## ```RedisInsight.xml```
+### **```RedisInsight.xml```**
 
   RedisInsight - The GUI for Redis.
 
 * Take your productivity to the next level when developing with Redis or Redis Stack! Use RedisInsight to visualize and optimize Redis data. A powerful desktop manager, RedisInsight provides an intuitive and efficient UI for Redis and Redis Stack and supports CLI interaction in a fully-featured desktop UI client.<br>
 https://redis.io/insight/
 
-## ```semaphore.xml ```
+### **```semaphore.xml ```**
 
 * Semaphore is a modern UI for Ansible. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system.
 
@@ -94,4 +99,4 @@ https://redis.io/insight/
     * Delegate other users the running of playbooks
     * Get notifications about playbook runs
 
-https://semaphoreui.com
+  https://semaphoreui.com

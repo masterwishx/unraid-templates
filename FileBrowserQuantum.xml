@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>FileBrowserQuantum</Name>
+  <Repository>gtstef/filebrowser</Repository>
+  <Registry>https://hub.docker.com/r/gtstef/filebrowser</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/194954-support-template-masterwishx-filebrowser-quantum/</Support>
+  <Project>https://github.com/gtsteffaniak/filebrowser</Project>
+  <Overview>FileBrowser Quantum provides an easy way to access and manage your files from the web. It has a modern responsive interface that has many advanced features to manage users, access, sharing, and file preview and editing.&#13;
+&#13;
+This version is called "Quantum" because it packs tons of advanced features into a tiny easy to run file. Unlike the majority of alternative options, FileBrowser Quantum is simple to install and easy to configure.&#13;
+&#13;
+https://github.com/gtsteffaniak/filebrowser&#13;
+&#13;
+Config&#13;
+https://github.com/gtsteffaniak/filebrowser/blob/main/frontend/public/config.generated.yaml&#13;
+&#13;
+Read&#13;
+https://filebrowserquantum.com/en/docs/getting-started/</Overview>
+  <Category>Cloud: Network:Web Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:80]/files</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/FileBrowserQuantum.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/gtsteffaniak/filebrowser/refs/heads/main/frontend/public/img/icons/favicon-256x256.png</Icon>
+  <ExtraParams>--user 1000:100</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1762714908</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>**NOTE:**&#13;
+1. *First make folders and set permissions:*&#13;
+&#13;
+ mkdir -p /mnt/user/appdata/filebrowserQuantum/tmp&#13;
+ chown -R 1000:100 /mnt/user/appdata/filebrowserQuantum&#13;
+ chmod 755 /mnt/user/appdata/filebrowserQuantum&#13;
+ chmod -R 777 /mnt/user/appdata/filebrowserQuantum/tmp&#13;
+ &#13;
+2. *Download config and put to* "**/filebrowserQuantum**" *folder.*&#13;
+ https://github.com/masterwishx/unraid-templates/tree/main/configs/filebrowserQuantum/config.yaml&#13;
+ &#13;
+3. *Make share for files* "**FileBrowser Files**"*, then make folder for users.*&#13;
+ mkdir -p /mnt/user/FileBrowser Files/users&#13;
+ chown -R 1000:100 /mnt/user/FileBrowser Files/users&#13;
+ &#13;
+4. *Enjoy*&#13;
+&#13;
+**Warning:**&#13;
+*After the first login using* **admin:admin** *, change the password or create a new admin user.*&#13;
+*If you do not update the credentials in the config file like this:*&#13;
+&#13;
+ 'adminUsername: "**hidden**"'&#13;
+ 'adminPassword: ""'&#13;
+ &#13;
+*Then the default admin values will be restored after a container restart.*</Requires>
+  <Config Name="Host Path 1" Target="/srv" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/FileBrowser Files/</Config>
+  <Config Name="App Path" Target="/home/filebrowser/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/filebrowserQuantum</Config>
+  <Config Name="Port" Target="80" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8890</Config>
+  <Config Name="Cache Path" Target="/home/filebrowser/data/tmp" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/filebrowserQuantum/tmp</Config>
+  <Config Name="FILEBROWSER_CONFIG" Target="FILEBROWSER_CONFIG" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">data/config.yaml</Config>
+  <TailscaleStateDir/>
+</Container>
