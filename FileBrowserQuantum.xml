@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>FileBrowserQuantum</Name>
-  <Repository>gtstef/filebrowser</Repository>
+  <Repository>gtstef/filebrowser:stable</Repository>
   <Registry>https://hub.docker.com/r/gtstef/filebrowser</Registry>
   <Network>bridge</Network>
   <MyIP/>
