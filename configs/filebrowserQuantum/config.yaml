@@ -80,13 +80,13 @@ frontend:
   name: "FileBrowser Quantum"             # display name
   disableDefaultLinks: false              # disable default links in the sidebar
   disableUsedPercentage: false            # disable used percentage for the sources in the sidebar
-  externalLinks:
-    - text: "(v1.0.0-stable)"             # the text to display on the link  validate:required  validate:required
-      title: "75c8d7847f9d57a8a756eb0db40b08b99912d45d" # the title to display on hover
-      url: "https://github.com/gtsteffaniak/filebrowser/releases/" # the url to link to  validate:required  validate:required
-    - text: "Help"                        # the text to display on the link  validate:required  validate:required
-      title: ""                           # the title to display on hover
-      url: "help prompt"                  # the url to link to  validate:required  validate:required
+  # externalLinks:
+  #   - text: "(v1.0.0-stable)"             # the text to display on the link  validate:required  validate:required
+  #     title: "75c8d7847f9d57a8a756eb0db40b08b99912d45d" # the title to display on hover
+  #     url: "https://github.com/gtsteffaniak/filebrowser/releases/" # the url to link to  validate:required  validate:required
+  #   - text: "Help"                        # the text to display on the link  validate:required  validate:required
+  #     title: ""                           # the title to display on hover
+  #     url: "help prompt"                  # the url to link to  validate:required  validate:required
   disableNavButtons: false                # disable the nav buttons in the sidebar
   styling:
     disableEventThemes: false             # disable the event based themes,
