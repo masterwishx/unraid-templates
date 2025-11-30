@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>NetAlertX</Name>
+  <Repository>jokobsk/netalertx</Repository>
+  <Registry>https://registry.hub.docker.com/r/jokobsk/netalertx</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/195448-support-template-masterwishx-netalertx/</Support>
+  <Project>https://github.com/jokob-sk/NetAlertX</Project>
+  <Overview>**NetAlertX - Network, presence scanner and alert framework**&#13;
+Get visibility of what's going on on your WIFI/LAN network and enable presence detection of important devices. Schedule scans for devices, port changes and get alerts if unknown devices or changes are found. Write your own Plugin with auto-generated UI and in-build notification system. Build out and easily maintain your network source of truth (NSoT) and device inventory.&#13;
+&#13;
+**Scanners**&#13;
+The app scans your network for New devices, New connections (re-connections), Disconnections, "Always Connected" devices down, Devices IP changes and Internet IP address changes. Discovery &amp;amp; scan methods include: arp-scan, Pi-hole - DB import, Pi-hole - DHCP leases import, Generic DHCP leases import, UNIFI controller import, SNMP-enabled router import. Check the Plugins docs for a full list of avaliable plugins.&#13;
+&#13;
+**App Link**&#13;
+https://github.com/jokob-sk/NetAlertX/&#13;
+&#13;
+**App Docs**&#13;
+https://jokob-sk.github.io/NetAlertX/</Overview>
+  <Category>Security: Tools:Utilities Network:Management</Category>
+  <WebUI>http://[IP]:[PORT:20211]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/NetAlertX.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/jokob-sk/NetAlertX/main/front/img/NetAlertX_logo_notification.png</Icon>
+  <ExtraParams>--read-only --cap-drop="ALL" --cap-add="NET_RAW" --cap-add="NET_ADMIN" --cap-add="NET_BIND_SERVICE" --tmpfs "/tmp:uid=20211,gid=20211,mode=1700,rw,noexec,nosuid,nodev,async,noatime,nodiratime"</ExtraParams>
+  <PostArgs/>  
+  <DateInstalled>1764497040</DateInstalled>  
+  <DonateText/>
+  <DonateLink/>
+  <Requires>**NOTE:**&#13;
+1. *First make folders and set permissions:*&#13;
+&#13;
+ `mkdir -p /mnt/user/appdata/netalertx`&#13;
+ `chown -R 20211:20211 /mnt/user/appdata/netalertx`&#13;
+ `chmod 755 /mnt/user/appdata/netalertx`&#13;
+&#13;
+2. *Enjoy*&#13;
+&#13;
+**Warning:**&#13;
+&#13;
+ *Using tmpfs reduces disk writes and speeds up I/O, but all  data stored in memory will be lost on restart.*&#13;
+&#13;
+ *If you need to keep a persistent, file-based log history, add **Log Path** to the container:*&#13;
+ `/mnt/user/appdata/netalertx/log:/tmp/log`</Requires>
+  <Config Name="App path" Target="/data" Default="" Mode="rw" Description="Path to Config location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/netalertx-new</Config>
+  <Config Name="Web Port" Target="20211" Default="20211" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">20211</Config>
+  <Config Name="Time Zone" Target="/etc/localtime" Default="" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/etc/localtime</Config>
+  <TailscaleStateDir/>
+</Container>
