@@ -44,7 +44,7 @@ https://jokob-sk.github.io/NetAlertX/</Overview>
 &#13;
  *If you need to keep a persistent, file-based log history, add **Log Path** to the container:*&#13;
  `/mnt/user/appdata/netalertx/log:/tmp/log`</Requires>
-  <Config Name="App Path" Target="/data" Default="" Mode="rw" Description="Path to Config location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/netalertx</Config>
+  <Config Name="App Path" Target="/data" Default="" Mode="rw" Description="Path to App location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/netalertx</Config>
   <Config Name="Web Port" Target="20211" Default="20211" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">20211</Config>
   <Config Name="Time Zone" Target="/etc/localtime" Default="" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/etc/localtime</Config>
   <TailscaleStateDir/>
