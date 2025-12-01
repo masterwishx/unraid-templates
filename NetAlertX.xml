@@ -34,7 +34,7 @@ https://jokob-sk.github.io/NetAlertX/</Overview>
 &#13;
  `mkdir -p /mnt/user/appdata/netalertx`&#13;
  `chown -R 20211:20211 /mnt/user/appdata/netalertx`&#13;
- `chmod 755 /mnt/user/appdata/netalertx`&#13;
+ `chmod -R 755 /mnt/user/appdata/netalertx`&#13;
 &#13;
 2. *Enjoy*&#13;
 &#13;
