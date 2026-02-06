@@ -23,7 +23,7 @@ https://filebrowserquantum.com/en/docs/getting-started/</Overview>
   <Category>Cloud: Network:Web Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:80]/files</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/FileBrowserQuantum.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/gtsteffaniak/filebrowser/refs/heads/main/frontend/public/img/icons/favicon-256x256.png</Icon>
+  <Icon>https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/filebrowser-quantum.png</Icon>
   <ExtraParams>--user 1000:100</ExtraParams>
   <PostArgs/>
   <CPUset/>
