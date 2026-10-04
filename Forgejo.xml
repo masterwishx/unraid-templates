@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Forgejo</Name>
+  <Repository>codeberg.org/forgejo/forgejo:16</Repository>
+  <Registry>https://codeberg.org/forgejo/-/packages/container/forgejo</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <MyMAC/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://codeberg.org/forgejo/forgejo/issues</Support>
+  <Project>https://forgejo.org</Project>
+  <ReadMe/>
+  <Overview>&#13;
+Forgejo is a lightweight, self-hosted Git forge (a fork of Gitea) with built-in CI/CD via Forgejo Actions.&#13;
+&#13;
+SETUP: After the first start, open the WebUI on port 3000 and complete the initial installation wizard. The default external SSH port is 222 (mapped to port 22 inside the container) so it does not conflict with Unraid's own SSH.&#13;
+&#13;
+For CI/CD, install the separate ForgejoRunner container and register it with this instance.&#13;
+  </Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/selfhst/icons/png/forgejo.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1791139626</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="HTTP port for the Forgejo web interface." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="SSH Port" Target="22" Default="222" Mode="tcp" Description="Git over SSH. Host port 222 is used to avoid a conflict with the Unraid SSH server on port 22." Type="Port" Display="always" Required="true" Mask="false">222</Config>
+  <Config Name="Data Path" Target="/data" Default="/mnt/user/appdata/forgejo/data" Mode="rw" Description="Persistent storage for repositories, the SQLite database, configuration (app.ini), LFS objects, and attachments. Back up this directory regularly." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/forgejo/data</Config>
+  <Config Name="Localtime" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Mounts the host timezone file so container timestamps match the Unraid timezone." Type="Path" Display="advanced" Required="false" Mask="false">/etc/localtime</Config>
+  <Config Name="USER_UID" Target="USER_UID" Default="99" Mode="" Description="UID of the user inside the container. On Unraid this is normally 99 (nobody). Keep your previous value if you already have existing data." Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="USER_GID" Target="USER_GID" Default="100" Mode="" Description="GID of the group inside the container. On Unraid this is normally 100 (users). Keep your previous value if you already have existing data." Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <TailscaleStateDir/>
+</Container>
