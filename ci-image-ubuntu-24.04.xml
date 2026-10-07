@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ci-image-ubuntu-24.04</Name>
+  <Repository>ghcr.io/catthehacker/ubuntu:act-24.04</Repository>
+  <Registry>https://github.com/catthehacker/docker_images/pkgs/container/ubuntu</Registry>
+  <Network>none</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/catthehacker/docker_images</Support>
+  <Project>https://github.com/catthehacker/docker_images</Project>
+  <Overview>Image keeper for Forgejo Runner (ubuntu-latest label). This container must stay stopped: it only exists so the image is not shown as an orphan and can be updated from the Unraid UI. Do NOT start it and do NOT enable Autostart.</Overview>
+  <Icon>https://cdn.jsdelivr.net/gh/selfhst/icons/png/ubuntu.png</Icon>
+  <Category>Tools:</Category>
+  <WebUI/>
+  <ExtraParams>--restart=no</ExtraParams>
+  <PostArgs>/bin/true</PostArgs>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>  
+</Container>
