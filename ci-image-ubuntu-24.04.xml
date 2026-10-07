@@ -5,17 +5,23 @@
   <Registry>https://github.com/catthehacker/docker_images/pkgs/container/ubuntu</Registry>
   <Network>none</Network>
   <MyIP/>
+  <MyMAC/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/catthehacker/docker_images</Support>
   <Project>https://github.com/catthehacker/docker_images</Project>
+  <ReadMe/>
   <Overview>Image keeper for Forgejo Runner (ubuntu-latest label). This container must stay stopped: it only exists so the image is not shown as an orphan and can be updated from the Unraid UI. Do NOT start it and do NOT enable Autostart.</Overview>
-  <Icon>https://cdn.jsdelivr.net/gh/selfhst/icons/png/ubuntu.png</Icon>
   <Category>Tools:</Category>
   <WebUI/>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/selfhst/icons/png/ubuntu.png</Icon>
   <ExtraParams>--restart=no</ExtraParams>
   <PostArgs>/bin/true</PostArgs>
+  <CPUset/>
+  <DateInstalled>1791400235</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Requires/>  
+  <Requires/>
+  <TailscaleStateDir/>
 </Container>
