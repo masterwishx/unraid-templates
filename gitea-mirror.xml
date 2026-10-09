@@ -14,7 +14,7 @@
   <Overview>Gitea Mirror automatically mirrors your GitHub repositories (including organizations, starred repos, etc.) to a self-hosted Gitea instance. Set BETTER_AUTH_SECRET (openssl rand -base64 32) and ENCRYPTION_SECRET (openssl rand -base64 48) explicitly so they are kept with your container config; if left empty they are auto-generated and stored in the data folder. Make sure the URL variables match the address you use to open the WebUI.</Overview>
   <Category>Backup: Tools: Network:Web</Category>
   <WebUI>http://[IP]:[PORT:4321]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/master/gitea-mirror.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/gitea-mirror.xml</TemplateURL>
   <Icon>https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/gitea-mirror.png</Icon>
   <ExtraParams>--user=99:100</ExtraParams>
   <PostArgs/>
