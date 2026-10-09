@@ -12,7 +12,7 @@
   <Overview>Semaphore is a modern UI for Ansible. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system.</Overview>
   <Category>Cloud: Network:Other Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/master/semaphore.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/semaphore.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/images/semaphore.png</Icon>
   <ExtraParams/>
   <PostArgs/>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Gitea-Mirror</Name>
+  <Repository>ghcr.io/raylabshq/gitea-mirror:latest</Repository>
+  <Registry>https://github.com/RayLabsHQ/gitea-mirror/pkgs/container/gitea-mirror</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <MyMAC/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/RayLabsHQ/gitea-mirror/issues</Support>
+  <Project>https://github.com/RayLabsHQ/gitea-mirror</Project>
+  <ReadMe/>
+  <Overview>Gitea Mirror automatically mirrors your GitHub repositories (including organizations, starred repos, etc.) to a self-hosted Gitea instance. Set BETTER_AUTH_SECRET (openssl rand -base64 32) and ENCRYPTION_SECRET (openssl rand -base64 48) explicitly so they are kept with your container config; if left empty they are auto-generated and stored in the data folder. Make sure the URL variables match the address you use to open the WebUI.</Overview>
+  <Category>Backup: Tools: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:4321]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/gitea-mirror.xml</TemplateURL>
+  <Icon>https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/gitea-mirror.png</Icon>
+  <ExtraParams>--user=99:100</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1791550881</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI Port" Target="4321" Default="4321" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">4321</Config>
+  <Config Name="Data" Target="/app/data" Default="/mnt/user/appdata/gitea-mirror" Mode="rw" Description="Database and app data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gitea-mirror</Config>
+  <Config Name="BETTER_AUTH_SECRET" Target="BETTER_AUTH_SECRET" Default="" Mode="" Description="Required. Signs session tokens (min 32 chars). Generate with: openssl rand -base64 32" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="ENCRYPTION_SECRET" Target="ENCRYPTION_SECRET" Default="" Mode="" Description="Recommended. Encrypts stored GitHub/Gitea/notification tokens. Generate with: openssl rand -base64 48. If empty, one is auto-generated and stored in /app/data/.encryption_secret. If lost, tokens must be re-entered." Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="BETTER_AUTH_URL" Target="BETTER_AUTH_URL" Default="http://localhost:4321" Mode="" Description="URL you use to access the WebUI, e.g. http://192.168.1.10:4321" Type="Variable" Display="always" Required="true" Mask="false">http://192.168.1.10:4321</Config>
+  <Config Name="PUBLIC_BETTER_AUTH_URL" Target="PUBLIC_BETTER_AUTH_URL" Default="http://localhost:4321" Mode="" Description="Same as BETTER_AUTH_URL (public address of the WebUI)" Type="Variable" Display="always" Required="true" Mask="false">http://192.168.1.10:4321</Config>
+  <Config Name="BETTER_AUTH_TRUSTED_ORIGINS" Target="BETTER_AUTH_TRUSTED_ORIGINS" Default="http://localhost:4321" Mode="" Description="Comma-separated list of trusted origins; include the WebUI address (and reverse proxy domain if used)" Type="Variable" Display="always" Required="true" Mask="false">http://192.168.1.10:4321</Config>
+  <TailscaleStateDir/>
+</Container>
