@@ -16,7 +16,7 @@
   <WebUI>http://[IP]:[PORT:4321]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/gitea-mirror.xml</TemplateURL>
   <Icon>https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/gitea-mirror.png</Icon>
-  <ExtraParams>--user=99:100</ExtraParams>
+  <ExtraParams>--user=99:100 --restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1791550881</DateInstalled>
