@@ -14,7 +14,7 @@
   <Overview>Image keeper for Forgejo Runner (ubuntu-latest label). This container must stay stopped: it only exists so the image is not shown as an orphan and can be updated from the Unraid UI. Do NOT start it and do NOT enable Autostart.</Overview>
   <Category>Tools:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/master/ci-image-ubuntu-24.04.xml</TemplateURL>
   <Icon>https://cdn.jsdelivr.net/gh/selfhst/icons/png/ubuntu.png</Icon>
   <ExtraParams>--restart=no</ExtraParams>
   <PostArgs>/bin/true</PostArgs>
