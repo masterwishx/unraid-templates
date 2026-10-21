@@ -24,7 +24,7 @@ PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/chromium?token=yourtoken&amp;amp;laun
 </Overview>
   <Category>Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:3000]/?token=2BR6DgQzZL8md4Bk5rewy3K9k</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/master/browserless.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/master/browserless-v2.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/images/browserless_logo.png</Icon>
   <ExtraParams>--restart=unless-stopped --shm-size=2G</ExtraParams>
   <PostArgs/>

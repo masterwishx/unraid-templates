@@ -42,8 +42,8 @@ https://filebrowserquantum.com/en/docs/getting-started/</Overview>
  https://github.com/masterwishx/unraid-templates/tree/main/configs/filebrowserQuantum/config.yaml&#13;
  &#13;
 3. *Make share for files* "**FileBrowser Files**", *then make folder for users.*&#13;
- mkdir -p /mnt/user/FileBrowser Files/users&#13;
- chown -R 1000:100 /mnt/user/FileBrowser Files/users&#13;
+ mkdir -p "/mnt/user/FileBrowser Files/users"&#13;
+ chown -R 1000:100 "/mnt/user/FileBrowser Files/users"&#13;
  &#13;
 4. *Enjoy*&#13;
 &#13;
