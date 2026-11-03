@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Forgejo</Name>
-  <Repository>codeberg.org/forgejo/forgejo:16</Repository>
+  <Repository>codeberg.org/forgejo/forgejo:17</Repository>
   <Registry>https://codeberg.org/forgejo/-/packages/container/forgejo</Registry>
   <Network>bridge</Network>
   <MyIP/>
