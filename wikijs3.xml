@@ -13,7 +13,7 @@
   <Overview>Wiki.js v3 - modern, lightweight and powerful wiki app built on Node.js. Requires PostgreSQL 17 or later.</Overview>
   <Category>Cloud: Productivity:</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/wikijs.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/wikijs3.xml</TemplateURL>
   <Icon>https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/wiki-js.png</Icon>
   <ExtraParams>--user 99:100</ExtraParams>
   <PostArgs/>
