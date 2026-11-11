@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ci-image-gitea</Name>
+  <Repository>docker.gitea.com/runner-images:ubuntu-latest</Repository>
+  <Registry>https://hub.docker.com/r/gitea/runner-images</Registry>
+  <Branch>
+    <Tag>ubuntu-latest</Tag>
+    <TagDescription>Default: full-featured default image (root user). Currently ubuntu-24.04 according to the repository README, Nov 2026</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>ubuntu-26.04</Tag>
+    <TagDescription>Default image pinned to Ubuntu 26.04</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>ubuntu-24.04</Tag>
+    <TagDescription>Default image pinned to Ubuntu 24.04</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>ubuntu-22.04</Tag>
+    <TagDescription>Default image pinned to Ubuntu 22.04</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>ubuntu-latest-slim</Tag>
+    <TagDescription>Slim image (node:24-trixie-slim, Debian 13): Node.js, git and ssh only. All slim tags point to the same image</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>ubuntu-26.04-slim</Tag>
+    <TagDescription>Slim image (same image as ubuntu-latest-slim)</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>ubuntu-24.04-slim</Tag>
+    <TagDescription>Slim image (same image as ubuntu-latest-slim)</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>ubuntu-22.04-slim</Tag>
+    <TagDescription>Slim image (same image as ubuntu-latest-slim)</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>ubuntu-latest-full</Tag>
+    <TagDescription>WARNING: huge image (GitHub-hosted runner copy, tens of GB). Currently ubuntu-24.04-full</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>ubuntu-26.04-full</Tag>
+    <TagDescription>WARNING: huge image (GitHub-hosted runner copy), amd64 only</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>ubuntu-24.04-full</Tag>
+    <TagDescription>WARNING: huge image (GitHub-hosted runner copy)</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>ubuntu-22.04-full</Tag>
+    <TagDescription>WARNING: huge image, no longer refreshed upstream</TagDescription>
+  </Branch>
+  <Network>none</Network>
+  <MyIP/>
+  <MyMAC/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://gitea.com/gitea/runner-images</Support>
+  <Project>https://gitea.com/gitea/runner-images</Project>
+  <ReadMe>https://gitea.com/gitea/runner-images</ReadMe>
+  <Overview>Image keeper for Forgejo Runner using the official Gitea runner images.&#13;
+&#13;
+This container must stay stopped: it only exists so the image is not shown as an orphan and can be updated from the Unraid UI.&#13;
+&#13;
+Do NOT start it and do NOT enable Autostart.&#13;
+&#13;
+NOTE: ubuntu-latest currently points to ubuntu-24.04, see the repository README for the current mapping.&#13;
+</Overview>
+  <Category>Tools:</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/ci-image-gitea.xml</TemplateURL>
+  <Icon>https://cdn.jsdelivr.net/gh/selfhst/icons/png/ubuntu.png</Icon>
+  <ExtraParams>--restart=no</ExtraParams>
+  <PostArgs>/bin/true</PostArgs>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Select the same tag that your runner label uses, for example: ubuntu-latest:docker://docker.gitea.com/runner-images:ubuntu-latest</Requires>
+</Container>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>wikijs3</Name>
+  <Repository>ghcr.io/requarks/wiki:3</Repository>
+  <Registry>https://github.com/Requarks/wiki/pkgs/container/wiki</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Requarks/wiki/discussions</Support>
+  <Project>https://github.com/Requarks/wiki</Project>
+  <ReadMe/>
+  <Overview>Wiki.js v3 - modern, lightweight and powerful wiki app built on Node.js. Requires PostgreSQL 17 or later.</Overview>
+  <Category>Cloud: Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/wikijs.xml</TemplateURL>
+  <Icon>https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/wiki-js.png</Icon>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <PostArgs/>
+  <CPUset/> 
+  <Requires>Create a PostgreSQL database and user:&#13;
+&#13;
+`docker exec -it &amp;lt;postgres-container&amp;gt; psql -U postgres -c "CREATE USER wikijs3 WITH PASSWORD 'My Password';" -c "CREATE DATABASE wikijs3 OWNER wikijs3;"`</Requires>
+  <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="Data" Target="/wiki/data" Default="/mnt/user/appdata/wikijs3" Mode="rw" Description="Wiki.js data (content, repo, cache). Must be owned by 99:100" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/wikijs3</Config>
+  <Config Name="Content" Target="/wiki/data/content" Default="/mnt/user/appdata/wikijs3/content" Mode="rw" Description="Wiki.js content" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/wikijs3/content</Config>
+  <Config Name="Repo" Target="/wiki/data/repo" Default="/mnt/user/appdata/wikijs3/repo" Mode="rw" Description="Git storage repo" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/wikijs3/repo</Config>
+  <Config Name="ADMIN_EMAIL" Target="ADMIN_EMAIL" Default="admin@example.com" Mode="" Description="Root administrator email (used only on first run, if the root account does not exist yet)" Type="Variable" Display="always" Required="true" Mask="false">admin@example.com</Config>
+  <Config Name="ADMIN_PASS" Target="ADMIN_PASS" Default="" Mode="" Description="Root administrator initial password (used only on first run)" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="PostgreSQL hostname or IP (PostgreSQL 17+ required)" Type="Variable" Display="always" Required="true" Mask="false">192.168.0.x</Config>
+  <Config Name="DB_PORT" Target="DB_PORT" Default="5432" Mode="" Description="PostgreSQL port" Type="Variable" Display="always" Required="false" Mask="false">5432</Config>
+  <Config Name="DB_NAME" Target="DB_NAME" Default="wikijs3" Mode="" Description="Database name (use a NEW empty DB, not the v2 one)" Type="Variable" Display="always" Required="true" Mask="false">wikijs3</Config>
+  <Config Name="DB_USER" Target="DB_USER" Default="wikijs3" Mode="" Description="Database user" Type="Variable" Display="always" Required="true" Mask="false">wikijs3</Config>
+  <Config Name="DB_PASS" Target="DB_PASS" Default="" Mode="" Description="Database password" Type="Variable" Display="always" Required="true" Mask="true"></Config>  
+  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="info" Mode="" Description="debug, info, warn, error" Type="Variable" Display="advanced" Required="false" Mask="false">info</Config>
+</Container>

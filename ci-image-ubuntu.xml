@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ci-image-ubuntu</Name>
+  <Repository>ghcr.io/catthehacker/ubuntu:act-latest</Repository>
+  <Registry>https://github.com/catthehacker/docker_images/pkgs/container/ubuntu</Registry>
+  <Branch>
+    <Tag>act-latest</Tag>
+    <TagDescription>Default: medium-size act image (root user). Currently act-26.04 (as of README, Nov 2026); the target moves when upstream bumps Ubuntu LTS</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>act-26.04</Tag>
+    <TagDescription>act image pinned to Ubuntu 26.04</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>act-24.04</Tag>
+    <TagDescription>act image pinned to Ubuntu 24.04</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>act-22.04</Tag>
+    <TagDescription>act image pinned to Ubuntu 22.04</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>runner-latest</Tag>
+    <TagDescription>Same as act, but runs as non-root user "runner"</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>js-latest</Tag>
+    <TagDescription>act + JS tools (yarn, nvm, node 20/24, pnpm, etc.)</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>go-latest</Tag>
+    <TagDescription>act + Go tools</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>rust-latest</Tag>
+    <TagDescription>act + Rust tools (rustfmt, clippy, etc.)</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>pwsh-latest</Tag>
+    <TagDescription>act + PowerShell tools and modules</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>dotnet-latest</Tag>
+    <TagDescription>act + .NET tools</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>java-tools-latest</Tag>
+    <TagDescription>act + Java tools (Ant, Maven, etc.)</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>gh-latest</Tag>
+    <TagDescription>act + GitHub CLI tools</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>custom-latest</Tag>
+    <TagDescription>act + custom tools</TagDescription>
+  </Branch>
+  <Network>none</Network>
+  <MyIP/>
+  <MyMAC/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/catthehacker/docker_images</Support>
+  <Project>https://github.com/catthehacker/docker_images</Project>
+  <ReadMe/>
+  <Overview>Image keeper for Forgejo Runner.&#13;
+&#13;
+This container must stay stopped: it only exists so the image is not shown as an orphan and can be updated from the Unraid UI.&#13;
+&#13;
+Do NOT start it and do NOT enable Autostart.&#13;
+&#13;
+NOTE: *-latest tags follow the newest Ubuntu LTS, see the repository README for the current mapping.&#13;
+</Overview>
+  <Category>Tools:</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/masterwishx/unraid-templates/main/ci-image-ubuntu.xml</TemplateURL>
+  <Icon>https://cdn.jsdelivr.net/gh/selfhst/icons/png/ubuntu.png</Icon>
+  <ExtraParams>--restart=no</ExtraParams>
+  <PostArgs>/bin/true</PostArgs>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Select the same tag that your runner label uses, for example: **ubuntu-latest:docker://ghcr.io/catthehacker/ubuntu:act-latest**.</Requires>
+</Container>
