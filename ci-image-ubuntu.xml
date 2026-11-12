@@ -80,5 +80,7 @@ NOTE: *-latest tags follow the newest Ubuntu LTS, see the repository README for 
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Requires>Select the same tag that your runner label uses, for example: **ubuntu-latest:docker://ghcr.io/catthehacker/ubuntu:act-latest**.</Requires>
+  <Requires>Select the same tag that your runner label uses, for example:&#13;
+&#13;
+`ubuntu-latest:docker://ghcr.io/catthehacker/ubuntu:act-latest`.</Requires>
 </Container>
