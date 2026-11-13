@@ -1,102 +1,109 @@
-# unRAID Plugins for CA
+# Unraid Templates for Community Applications
 
-###  **```Mover Tuning Plugin```**
+Unraid Community Applications (CA) templates for self-hosted and homelab services: Docker templates (XML) plus a CA plugin template, maintained by [@masterwishx](https://github.com/masterwishx).
 
-This is a simple [Unraid](https://unraid.net/) plugin that will let you fine-tune the operation of the [mover](https://docs.unraid.net/unraid-os/manual/additional-settings/#mover).
+## Table of Contents
 
-- On scheduled runs of mover    
-    - Only actually move file(s) if the cache drive is getting full (selectable thresholds) or/and based on files age, size, etc.
-    - Optionally don't move if a parity check / rebuild is already in-progress.
-    - Optionally validate input filenames to prevent attacks on the filename.
-- Optional ability to completely disable the scheduled runs of mover.
-- Manually executed runs of mover ("Move Now" button) or via command line ("mover start") can follow schedule rules or/and always move all files.
-- Expanded functionality with numerous additional options and settings.
+- [Installation](#installation)
+- [Available Templates](#available-templates)
+- [Plugins](#plugins)
+- [Notes](#notes)
+- [Repository Structure](#repository-structure)
+- [Contributing](#contributing)
+- [Support](#support)
 
-  https://github.com/masterwishx/ca.mover.tuning<br>
-  https://forums.unraid.net/topic/70783-plugin-mover-tuning<br>
+## Installation
 
-# unRAID Docker templates XML for CA
+### Via Community Applications
 
-### **```FileBrowserQuantum.xml```**
+Most templates can be found by searching for the app name in the **Apps** tab.
 
-* FileBrowser Quantum provides an easy way to access and manage your files from the web. It has a modern responsive interface that has many advanced features to manage users, access, sharing, and file preview and editing.
+### Manually (Template Repository)
 
-* This version is called "Quantum" because it packs tons of advanced features into a tiny easy to run file. Unlike the majority of alternative options, FileBrowser Quantum is simple to install and easy to configure.
+1. Open the **Docker** tab in the Unraid WebGUI.
+2. Scroll down and click **Add Container**.
+3. In the **Template** dropdown, pick the template you want (it will appear after step 4 below), or use the repository URL directly:
+   - Go to **Settings → Docker** (or the **Docker** tab → *Template repositories*, in advanced view).
+   - Add this URL to the **Template repositories** list and click **Save**:
 
-https://github.com/gtsteffaniak/filebrowser
+     ```
+     https://github.com/masterwishx/unraid-templates
+     ```
+4. Go back to **Docker → Add Container**, choose the template from the **User templates** list, adjust the settings and click **Apply**.
 
-### **```browserless.xml```**
+## Available Templates
 
-* browserless is a web-service that allows for remote clients to connect, drive, and execute headless work; all inside of docker. It offers first-class integrations for puppeteer, playwright, selenium's webdriver, and a slew of handy REST APIs for doing more common work.
+| Template | Description | Upstream |
+| --- | --- | --- |
+| [`FileBrowserQuantum.xml`](FileBrowserQuantum.xml) | Modern, responsive web file manager with user management, sharing, and file preview/editing. | [gtsteffaniak/filebrowser](https://github.com/gtsteffaniak/filebrowser) |
+| [`browserless.xml`](browserless.xml) | Headless Chrome as a service (Puppeteer, Playwright, Selenium, REST APIs). Used as the Playwright content fetcher for changedetection.io. | [browserless/browserless](https://github.com/browserless/browserless) |
+| [`browserless-v2.xml`](browserless-v2.xml) | Browserless v2 template. | [browserless/browserless](https://github.com/browserless/browserless) |
+| [`UrBackup.xml`](UrBackup.xml) | Open-source client/server backup system with image and file backups, running without interrupting the system. | [uroni/urbackup_backend](https://github.com/uroni/urbackup_backend) |
+| [`GrafanaMimir.xml`](GrafanaMimir.xml) | Horizontally scalable, highly available, multi-tenant long-term storage for Prometheus. | [grafana/mimir](https://github.com/grafana/mimir) |
+| [`Fio-Tester.xml`](Fio-Tester.xml) | Flexible I/O Tester for simulating and benchmarking storage workloads. | [axboe/fio](https://github.com/axboe/fio) |
+| [`RedisInsight.xml`](RedisInsight.xml) | GUI for visualizing and optimizing Redis data. | [redis.io/insight](https://redis.io/insight/) |
+| [`semaphore.xml`](semaphore.xml) | Modern web UI for Ansible: run playbooks, schedules, notifications, access control. | [semaphoreui.com](https://semaphoreui.com) |
+| [`NetAlertX.xml`](NetAlertX.xml) | Network scanner and presence/intruder alerting. | [jokob-sk/NetAlertX](https://github.com/jokob-sk/NetAlertX) |
+| [`Forgejo.xml`](Forgejo.xml) | Self-hosted Git forge (lightweight, community-driven fork of Gitea). | [forgejo.org](https://forgejo.org) |
+| [`gitea-mirror.xml`](gitea-mirror.xml) | Automatically mirrors GitHub repositories to a self-hosted Gitea/Forgejo instance. | [RayLabsHQ/gitea-mirror](https://github.com/RayLabsHQ/gitea-mirror) |
+| [`wikijs3.xml`](wikijs3.xml) | Wiki.js 3 (official image) with PostgreSQL setup instructions. | [requarks/wiki](https://github.com/requarks/wiki) |
+| [`ci-image-gitea.xml`](ci-image-gitea.xml) | CI runner image for Gitea Actions. | [gitea/runner-images](https://gitea.com/gitea/runner-images) |
+| [`ci-image-ubuntu.xml`](ci-image-ubuntu.xml) | Ubuntu-based CI runner image for Gitea/Forgejo Actions. | [catthehacker/docker_images](https://github.com/catthehacker/docker_images) |
+| [`ci-image-ubuntu-24.04.xml`](ci-image-ubuntu-24.04.xml) | Ubuntu 24.04 based CI runner image for Gitea/Forgejo Actions. | [catthehacker/docker_images](https://github.com/catthehacker/docker_images) |
 
-  This docker is needed for changedetection.io for Playwright content fetcher.
+## Plugins
 
-  more read here:<br>
-https://github.com/dgtlmoon/changedetection.io/wiki/Playwright-content-fetcher<br>
-https://docs.browserless.io/docs/docker-quickstart.html<br>
+### Mover Tuning (`ca.mover.tuning.xml`)
 
-  Docker size about 910Mb.
+A plugin that lets you fine-tune how the Unraid [mover](https://docs.unraid.net/unraid-os/manual/additional-settings/#mover) works.
 
-  add this var after install to your changedetection.io:<br>
-```PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/?stealth=1&--disable-web-security=true```
+- On scheduled runs, only move files when the cache is getting full (selectable thresholds) and/or based on file age, size, etc.
+- Optionally skip the mover while a parity check/rebuild is in progress.
+- Optionally validate input filenames to prevent filename-based attacks.
+- Optionally disable scheduled mover runs completely.
+- Manual runs ("Move Now" or `mover start`) can follow the schedule rules and/or always move everything.
+- Many additional options and settings.
 
-### **```browserless-v2.xml```**
+Links:
 
-* browserless is a web-service that allows for remote clients to connect, drive, and execute headless work; all inside of docker. It offers first-class integrations for puppeteer, playwright, selenium's webdriver, and a slew of handy REST APIs for doing more common work.
+- Source: [masterwishx/ca.mover.tuning](https://github.com/masterwishx/ca.mover.tuning)
+- Support thread: [Unraid Forums](https://forums.unraid.net/topic/70783-plugin-mover-tuning)
 
-  This docker is needed for changedetection.io for Playwright content fetcher.<br>
-https://github.com/browserless/browserless
+## Notes
 
+### browserless + changedetection.io
 
-### **```UrBackup.xml```**
+To use `browserless` as the Playwright content fetcher, add this variable to your changedetection.io container after installing:
 
-* UrBackup is an easy to setup Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.
-File and image backups are made while the system is running without interrupting current processes.
+```
+PLAYWRIGHT_DRIVER_URL=ws://yourIP:yourPORT/?stealth=1&--disable-web-security=true
+```
 
-* UrBackup also continuously watches folders you want backed up in order to quickly find differences to previous backups. Because of that, incremental file backups are really fast.
+More info: [changedetection.io Playwright content fetcher](https://github.com/dgtlmoon/changedetection.io/wiki/Playwright-content-fetcher) and the [Browserless Docker quickstart](https://docs.browserless.io/docs/docker-quickstart.html). The v1 image is about 910 MB.
 
-* Your files can be restored through the web interface, via the client or the Windows Explorer while the backups of drive volumes can be restored with a bootable CD or USB-Stick (bare metal restore).
-A web interface makes setting up your own backup server really easy.<br>
-https://www.urbackup.org/<br>
-https://hub.docker.com/r/uroni/urbackup-server<br>
-https://github.com/uroni/urbackup_backend<br>
+## Repository Structure
 
-### **```GrafanaMimir.xml```**
+```
+.
+├── configs/            # Extra config files used by templates
+├── images/             # Template icons
+├── ca_profile.xml      # CA author profile
+├── *.xml               # Docker / plugin templates
+└── README.md
+```
 
-* Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus.<br>
-https://github.com/grafana/mimir
+## Contributing
 
-### **```Fio-Tester.xml```**
+Issues and pull requests are welcome.
 
-  Flexible I/O Tester
+- Found a broken template or outdated default? [Open an issue](https://github.com/masterwishx/unraid-templates/issues).
+- Want to add or improve a template? Fork the repo, make your changes, and open a pull request.
+- Please validate XML before submitting and keep `<Support>`, `<Project>`, and `<Icon>` links up to date.
 
-* Fio was originally written to save me the hassle of writing special test case programs when I wanted to test a specific workload, either for performance reasons or to find/reproduce a bug. The process of writing such a test app can be tiresome, especially if you have to do it often. Hence I needed a tool that would be able to simulate a given I/O workload without resorting to writing a tailored test case again and again.
+## Support
 
-* A test work load is difficult to define, though. There can be any number of processes or threads involved, and they can each be using their own way of generating I/O. You could have someone dirtying large amounts of memory in a memory mapped file, or maybe several threads issuing reads using asynchronous I/O. fio needed to be flexible enough to simulate both of these cases, and many more.
+For app-specific problems, please use the upstream project's issue tracker (see the table above). For template problems (wrong paths, ports, variables, descriptions), open an issue in this repository.
 
-* Fio spawns a number of threads or processes doing a particular type of I/O action as specified by the user. fio takes a number of global parameters, each inherited by the thread unless otherwise parameters given to them overriding that setting is given. The typical use of fio is to write a job file matching the I/O load one wants to simulate.<br>
-https://github.com/axboe/fio
+## Disclaimer
 
-### **```RedisInsight.xml```**
-
-  RedisInsight - The GUI for Redis.
-
-* Take your productivity to the next level when developing with Redis or Redis Stack! Use RedisInsight to visualize and optimize Redis data. A powerful desktop manager, RedisInsight provides an intuitive and efficient UI for Redis and Redis Stack and supports CLI interaction in a fully-featured desktop UI client.<br>
-https://redis.io/insight/
-
-### **```semaphore.xml ```**
-
-* Semaphore is a modern UI for Ansible. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system.
-
-   With Semaphore you can:
-
-    * Build, deploy and rollback
-    * Group playbooks to projects
-    * Manage environments, inventories, repositories and access keys
-    * Run playbooks from the browser. Responsive UI allows the use of Semaphore on mobile devices
-    * Run playbooks by schedule
-    * View detailed logs of any playbook runs, at any time
-    * Delegate other users the running of playbooks
-    * Get notifications about playbook runs
-
-  https://semaphoreui.com
+These templates are provided as-is, without warranty. The applications are developed by their respective authors; this repository only provides Unraid templates for running them.
